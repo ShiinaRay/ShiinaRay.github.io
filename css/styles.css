@@ -1,0 +1,269 @@
+body{
+    background-color: rgb(58,58,58);
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background:black;
+    background-image: url("/X/images/w2f.png");
+    background-size: 100%;
+    background-position:top;
+    /* background-repeat: no-repeat; */
+    color:rgb(0,183,255);
+    padding: 20px;/*  %*/
+    height: 600px;
+    text-align: center;
+}
+
+header a{
+    color: rgb(252, 128, 200);
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+header .mobile{
+    display: none;
+}
+
+
+/* pseudo classes  伪类  */
+header li :sixth-child {
+    margin-left: 60px;
+}
+/* ???  不生效 被center覆盖？ */
+
+
+
+/* active ???   hover */
+
+
+header a:hover{
+    text-decoration: underline;
+    /* background-color: rgb(123, 198, 228); */
+}
+
+
+
+
+header .logo a{
+    background-image: url("../images/logo.png");
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 100px;
+    width: 350px;   /*60px or same with bg-size     dont need center  */
+    text-indent: -9999999px;
+    position: relative;
+    top: -40px;
+
+}
+
+nav ul{
+    margin: 0;
+    padding : 0;
+    list-style-type: none;
+}
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+    /* margin: 0 20px 0 0; */
+}
+
+/* responsive rules */
+
+/* px大小顺序有依据  后一个会覆盖前一个  顺序执行……  px最大为：XX    即  px不超过：XX的时候 */
+
+@media screen and (max-width: 1210px){
+    header{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 728px){
+    header{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 706px){
+    header{
+        height: 160px;
+    }
+
+    header .mobile{
+        display: inline-block;
+    }
+
+    header .desktop{
+        display: none;
+    }
+
+}
+
+
+
+
+ section.bishojo{   /* 或  直接.bishojo 因为只有一个类bishojo 后面复用要和前面保持一致，要不然复用好像不会生效 */
+    background:rgb(177, 212, 252);
+    color:black;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.bishojo figure{
+    margin: auto;
+    text-align: center;
+    width: 200px;
+}
+
+.bishojo figure img{
+    width: 200px;  /* 400px → 200px   整体缩小   像素概念理解？  尝试 举例……   像素越大越好？*/
+    border-radius: 50%;
+    border: 1px solid rgb(120, 200, 231);
+    box-shadow: rgb(252, 128, 200) 5px 10px 15px;
+}
+
+
+/* responsive rules */
+/* @media screen and (max-width: 706px){ */
+    /* section.bishojo { */
+        /* display: block; */
+    /* } */
+/* } */
+
+
+
+/*  section AddNumbers */
+
+#AddNumbers{
+    color :rgb(247, 103, 247);
+    text-align: center;
+}
+
+#num1 , #num2{
+    color: black;    
+    background-color:rgb(48, 167, 214);
+    opacity:0.5;
+    margin: 2%;
+    border-radius: 10px;
+}
+
+
+
+/* Section Show Pictures */
+.ShowPictures ul{
+    /* margin: 0; */
+    padding : 0;
+    list-style-type: none;
+}
+.ShowPictures li{
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.ShowPictures{
+    text-align: center;
+}
+
+.ShowPictures a{
+    color: rgb(252, 128, 200);
+    text-decoration: none;
+    /* margin-top: 100px; */
+    /* margin-bottom: 100px; */
+}
+
+.ShowPictures a:hover{
+    text-decoration: underline;
+    background-color: rgb(123, 198, 228);
+    border-radius: 10px;
+}
+
+#ShowPictures {
+    margin-top: 150px;
+    color: rgb(92, 200, 243);
+}
+
+
+
+
+/* edit checklist*/
+
+.checklist input {
+    display: none;
+}
+
+.checklist .edit span {
+    display: none;
+}
+
+.checklist .edit input {
+    display: initial;
+}
+/* 区分  .checklist.edit input     和    .checklist .edit input    
+dot前多了一个空格  空格后表示子类下的标签 即子标签    而dot后表示某个标签带有某个特定类的class   */
+/* 即 空格后是标签    而dot后是class属性 */
+
+/* 或 以下代码 */
+/* .checklist li input { */
+    /* display: none; */
+/* } */
+/*  */
+/* .checklist li.edit span { */
+    /* display: none; */
+/* } */
+/*  */
+/* .checklist li.edit input { */
+    /* display: initial; */
+/* } */
+
+
+.checklist h1{
+    text-align: center;
+    color: rgb(247, 103, 247);
+}
+.checklist li{
+    color:rgb(71, 185, 230);
+}
+.checklist input{
+    color:rgb(71, 185, 230);
+    border-radius: 10px
+    /* background-color: rgb(92, 200, 243); */
+    /* opacity: 0.2; */
+}
+
+
+
+
+
+footer{
+    background: black;
+    color:rgb(71, 185, 230);
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align:center;
+
+}
+button{
+    background:rgb(145, 9, 145);
+    border: none;
+    border-radius: 10px;    /*  %*/
+    color:white;
+}
+
+
+
+/* id 选择器
+id=""   类似class  但唯一  
+使用id 选择器 #id
+*/
+
+/* 新建更改文件目录路径等  需要更改 href src 等  注意目录路径问题！ */
