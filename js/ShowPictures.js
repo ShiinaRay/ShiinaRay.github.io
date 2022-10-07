@@ -1,10 +1,10 @@
 var apple = document.getElementById("apple");
-var ray = document.getElementById("ray");
+var elysia = document.getElementById("elysia");
 var silver = document.getElementById("silver");
 
 
 apple.addEventListener("click",picLink);
-ray.addEventListener("click",picLink);
+elysia.addEventListener("click",picLink);
 silver.addEventListener("click",picLink);
 
 function picLink(){
