@@ -1,2 +1,2 @@
 # ShiinaRay.github.io
-ShiinaRay.github.io
+https://shiinaray.github.io/
