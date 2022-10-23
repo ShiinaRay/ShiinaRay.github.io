@@ -7,7 +7,7 @@ body{
 }
 header{
     background:black;
-    background-image: url("../images/w2f.png");
+    background-image: url("../images/bg.png");
     /* background-image: url("/X/images/w2f.png");  放入其它文档路径目录会失效 */
     background-size: 100%;
     background-position:top;
