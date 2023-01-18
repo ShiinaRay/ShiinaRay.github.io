@@ -14,7 +14,7 @@ function editItem(){
     var input = this.querySelector("input");
     input.focus();
     input.setSelectionRange(0, input.value.length);
-} //？？？
+}
 
 function updateItem(){
     this.previousElementSibling.innerHTML = this.value;
@@ -26,5 +26,3 @@ function itemKeypress(event){
         updateItem.call(this);
     }
 }
-
-// 活用  console.log()
