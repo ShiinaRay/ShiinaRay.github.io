@@ -1,119 +1,341 @@
-body{
-    background-color: rgb(58,58,58);
-    color:white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* Custom properties/variables  */
+:root {
+    --main-white: #f0f0f0;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+/* Base reset */
+* {
     margin: 0;
     padding: 0;
 }
-header{
-    background:black;
-    background-image: url("../images/bg.png");
-    /* background-image: url("/X/images/w2f.png");  放入其它文档路径目录会失效 */
-    background-size: 100%;
-    background-position:top;
-    /* background-repeat: no-repeat; */
-    color:rgb(0,183,255);
-    padding: 20px;/*  %*/
-    height: 600px;
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Base styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff06e;
+}
+
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     text-align: center;
 }
 
-header a{
-    color: rgb(252, 128, 200);
+h1 {
+    font-size: 6rem;
+}
+
+h1.h1-one {
+    margin-top: 15vh;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
     text-decoration: none;
-    margin-top: 40px;
+    color: var(--main-white);
 }
 
-header .mobile{
-    display: none;
+img {
+    /*display: block;*/
+    /*width: 100%;*/
 }
 
+/* nav */
 
-/* pseudo classes  伪类  */
-header li :sixth-child {
-    margin-left: 60px;
-}
-/* ???  不生效 被center覆盖？ */
-
-
-
-/* active ???   hover */
-
-
-header a:hover{
-    text-decoration: underline;
-    /* background-color: rgb(123, 198, 228); */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(92, 200, 243, 0.9);
+    box-shadow: 0px 0 15px 0 rgba(252, 128, 200, 0.9);
+    z-index: 10;
 }
 
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
 
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
 
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
 
-header .logo a{
-    background-image: url("../images/logo.png");
-    background-size: 60px;
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+}
+
+.nav-list a:hover {
+    background-color: rgba(252, 128, 200, 0.8);
+    border-radius: 7px;
+}
+
+/* Welcome section */
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*width: 100vw;*/
+    width: 100%;
+    height: 115vh;
+    background: var(--main-blue);
+    /*background-color: #000;*/
+    /*background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);*/
+    /*background-size: 100%;*/
+    /*background-position:right;*/
+    /*background-position:bottom;*/
+    /*background-position: top;*/
     background-position: center;
+    background-image: url("../images/pinkbg.png");
     background-repeat: no-repeat;
+}
+
+.welcome-section > p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    /*color: skyblue;*/
+    color: black;
+}
+
+/* Projects section */
+
+.projects-section {
+    text-align: center;
+    padding: 5rem 0;
+    background: var(--main-blue);
+    background-position: center;
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+}
+
+.projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    /*border-bottom: 0.2rem solid var(--main-white);*/
+}
+
+@media (max-width: 28.75em) {
+    .projects-section-header {
+        font-size: 4rem;
+    }
+}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+    .projects-section {
+        padding: 6rem 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 10px var(--main-blue);
+    border-radius: 15px;
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+    color: pink;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.btn {
     display: inline-block;
-    height: 100px;
-    width: 350px;   /*60px or same with bg-size     dont need center  */
-    text-indent: -9999999px;
-    position: relative;
-    top: -40px;
-
+    padding: 1rem 2rem;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px var(--main-blue);
 }
 
-nav ul{
-    margin: 0;
-    padding : 0;
-    list-style-type: none;
-}
-nav li{
-    display: inline-block;
-    margin-right: 20px;
-    /* margin: 0 20px 0 0; */
+.btn-show-all {
+    font-size: 2rem;
+    background: var(--main-gray);
+    transition: background 0.3s ease-out;
 }
 
-/* responsive rules */
+.btn-show-all:hover {
+    background: rgba(92, 200, 243, 1);
+}
 
-/* px大小顺序有依据  后一个会覆盖前一个  顺序执行……  px最大为：XX    即  px不超过：XX的时候 */
+.btn-show-all:hover > i {
+    transform: translateX(2px);
+}
 
-@media screen and (max-width: 1210px){
-    header{
-        height: 350px;
+.btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+}
+
+/* Contact section */
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-gray);
+}
+
+.contact-section-header > h2 {
+    font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+        font-size: 4rem;
     }
 }
 
-@media screen and (max-width: 728px){
-    header{
-        height: 300px;
-    }
+.contact-section-header > p {
+    font-style: italic;
+    /*color: pink;*/
 }
 
-@media screen and (max-width: 706px){
-    header{
-        height: 160px;
-    }
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
 
-    header .mobile{
-        display: inline-block;
-    }
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
 
-    header .desktop{
-        display: none;
-    }
-
+.contact-details:hover {
+    transform: translateY(8px);
 }
 
 
 
 
- section.bishojo{   /* 或  直接.bishojo 因为只有一个类bishojo 后面复用要和前面保持一致，要不然复用好像不会生效 */
-    background:rgb(177, 212, 252);
-    color:black;
+section.bishojo{
+    background: rgb(41, 49, 94);
+    color:pink;
     padding: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    /*justify-content: center;*/
+    /*align-items: center;*/
 }
 
 
@@ -124,147 +346,51 @@ nav li{
 }
 
 .bishojo figure img{
-    width: 200px;  /* 400px → 200px   整体缩小   像素概念理解？  尝试 举例……   像素越大越好？*/
+    width: 200px;
     border-radius: 50%;
-    border: 1px solid rgb(120, 200, 231);
-    box-shadow: rgb(252, 128, 200) 5px 10px 15px;
-}
-
-
-/* responsive rules */
-/* @media screen and (max-width: 706px){ */
-    /* section.bishojo { */
-        /* display: block; */
-    /* } */
-/* } */
-
-
-
-/*  section AddNumbers */
-
-#AddNumbers{
-    color :rgb(247, 103, 247);
-    text-align: center;
-}
-
-#num1 , #num2{
-    color: black;    
-    background-color:rgb(48, 167, 214);
-    opacity:0.5;
-    margin: 2%;
-    border-radius: 10px;
-}
-
-
-
-/* Section Show Pictures */
-.ShowPictures ul{
-    /* margin: 0; */
-    padding : 0;
-    list-style-type: none;
-}
-.ShowPictures li{
-    display: inline-block;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding: 30px;
-}
-
-.ShowPictures{
-    text-align: center;
-}
-
-.ShowPictures a{
-    color: rgb(252, 128, 200);
-    text-decoration: none;
-    /* margin-top: 100px; */
-    /* margin-bottom: 100px; */
-}
-
-.ShowPictures a:hover{
-    text-decoration: underline;
-    background-color: rgb(123, 198, 228);
-    border-radius: 10px;
-}
-
-#ShowPictures {
-    margin-top: 150px;
-    color: rgb(92, 200, 243);
+    /*border: 1px solid rgba(120, 200, 231);*/
+    /*box-shadow: rgba(252, 128, 200) 5px 10px 15px;*/
+    box-shadow: 3px 3px 20px 0 rgba(252, 128, 200);
 }
 
 
 
 
-/* edit checklist*/
+/* Footer */
 
-.checklist input {
-    display: none;
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: var(--main-gray);
+    /*border-top: 4px solid rgba(92, 200, 243, 1);*/
+    color: rgba(92, 200, 243);
 }
 
-.checklist .edit span {
-    display: none;
+footer > p {
+    margin: 2rem;
 }
 
-.checklist .edit input {
-    display: initial;
+footer i {
+    vertical-align: middle;
 }
-/* 区分  .checklist.edit input     和    .checklist .edit input    
-dot前多了一个空格  空格后表示子类下的标签 即子标签    而dot后表示某个标签带有某个特定类的class   */
-/* 即 空格后是标签    而dot后是class属性 */
 
-/* 或 以下代码 */
-/* .checklist li input { */
-    /* display: none; */
-/* } */
-/*  */
-/* .checklist li.edit span { */
-    /* display: none; */
-/* } */
-/*  */
-/* .checklist li.edit input { */
-    /* display: initial; */
-/* } */
-
-
-.checklist h1{
-    text-align: center;
-    color: rgb(247, 103, 247);
+footer a {
+    color: #fff06e;
 }
-.checklist li{
-    color:rgb(71, 185, 230);
-}
-.checklist input{
-    color:rgb(71, 185, 230);
-    border-radius: 10px
-    /* background-color: rgb(92, 200, 243); */
-    /* opacity: 0.2; */
+
+@media (max-width: 28.75em) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 
-
-
-
-footer{
-    background: black;
-    color:rgb(71, 185, 230);
-    font-size: 12px;
-    padding: 20px 20px;
-    text-align:center;
-
-}
-button{
-    background:rgb(145, 9, 145);
-    border: none;
-    border-radius: 10px;    /*  %*/
-    color:white;
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
 }
 
-
-
-/* id 选择器
-id=""   类似class  但唯一  
-使用id 选择器 #id
-*/
-
-/* 新建更改文件目录路径等  需要更改 href src 等  注意目录路径问题！ */
