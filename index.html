@@ -276,5 +276,28 @@
 
 <!--<script src="js/add.js"></script>-->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
-
+<script src="./live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+    L2Dwidget.init({
+        model: {
+            // 模型
+            jsonPath: "./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json",
+            scale: 1 //模型缩放比例
+        },
+        display: {
+            position: "left", //模型的位置（左or右）
+            width: 150, //模型宽度
+            height: 300, //模型高度
+            hOffset: 0, //模型水平偏移量
+            vOffset: -20 //模型垂直偏移量
+        },
+        mobile: {
+            show: true, //手机端是否显示
+            scale: 1 //缩放比例
+        },
+        react: {
+            opacity: 1 //模型不透明度
+        }
+    })
+</script>
 </html>
