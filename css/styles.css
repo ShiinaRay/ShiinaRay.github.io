@@ -138,7 +138,7 @@ img {
 }
 
 .nav-list a {
-    display: block;
+    display: block;/*inline-block  inline in flex  differ  inline-flex */
     font-size: 2.2rem;
     padding: 2rem;
 }
@@ -165,14 +165,16 @@ img {
     /*background-position:right;*/
     /*background-position:bottom;*/
     /*background-position: top;*/
+    /*background-size: 100% auto;*/
     /*background-size: 100%;*/
     /*background-size: contain;*/
-    /*background-size: 135%;*/
     /*background-size: auto;*/
     /*background-size: 1920px;*/
     /*background-size: 1920px auto;*/
     /*background-size: auto 1080px;*/
     /*background-size: 50%, auto, contain;*/
+    /*background-size: 135%;*/
+    /*background-size: auto 100%;*/
     background-size: cover;
     /*background-position: 20%;*/
     /*background-position: -100px;*/
@@ -183,6 +185,7 @@ img {
     background-image: url("../images/bg-Elysia.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /*opacity: 0.9;*/
 }
 @media (max-width: 1314px) {
     .welcome-section {
@@ -208,6 +211,7 @@ img {
     background-color: rgba(92, 200, 243, 0.4);
     background-image: url("../images/bg.png");
     background-size: cover;
+    /*background-size: auto 100%;*/
     /*background-size: 120%;*/
     /*background-position: center;*/
     /*background-position: right;*/
@@ -403,9 +407,11 @@ footer {
     background-image: url("../images/bg-Elysia.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /*background-size: 100%;*/
-    background-size: contain;
+    /*background-size: auto 100%;*/
     /*background-size: cover;*/
+    background-size: contain;
+    /*background-size: 100%;*/
+    /*background-size: 100% auto;*/
     background-color: rgba(252, 128, 200, 0.4);
 }
 
