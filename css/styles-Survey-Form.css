@@ -11,6 +11,7 @@ body {
     color: #f5f6f7;
     font-family: Tahoma;
     font-size: 20px;
+    background-size: cover;
 }
 
 h1, p {
