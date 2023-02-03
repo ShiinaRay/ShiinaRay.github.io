@@ -3,15 +3,10 @@ html {
          Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
        */
     font-size: 10px;
-    /*双色撞色等*/
-    color: #be98aa;
-    color: #3e3f4c;
-    color: #be97a9;
-    color: #74638f;
     /*杠杠色*/
     color: rgba(196, 215, 231);
-    color: #C4D7E7FF;
-    color: #C4D7E7;
+    /*color: #C4D7E7FF;*/
+    /*color: #C4D7E7;*/
     user-select: none;
 }
 
@@ -22,7 +17,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-align: center;
-    /*color: #333;*/
     margin: 0;
     background-image: url("../images/bg-gjsg.jpg");
     background-size: cover;
@@ -81,7 +75,6 @@ h2 {
     margin: 30px 8px;
     padding: 15px;
     border-radius: 5px;
-    /*background-color: #eee;*/
 }
 
 @media (max-width: 460px) {
@@ -91,9 +84,9 @@ h2 {
 }
 
 #img-div {
-    /*background: white;*/
     padding: 10px;
     margin: 0;
+    perspective: 999px;
 }
 
 #img-div a{
@@ -107,6 +100,8 @@ h2 {
     opacity: 0.2;
     transition: all 0.1s ease-out, transform 0.3s ease-out;
     cursor: pointer;
+    /*perspective: 1000px;*/
+    /*transform-style: preserve-3d;*/
 }
 
 #img-div img{
@@ -123,9 +118,7 @@ h2 {
 }
 
 #img-div a:hover {
-    /*color: rgba(252, 128, 200);*/
     color: rgba(196, 215, 231);
-    /*background-color: rgba(252, 128, 200, 0.8);*/
     transform: scale(1.2);
     opacity: 0.7;
     box-shadow: 0 0 20px 5px rgba(252, 128, 200, 0.9);
@@ -193,4 +186,235 @@ blockquote {
 #last {
     margin: 50px auto;
     width: 80%;
+}
+
+
+.flip-image {
+    margin: auto;
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin-bottom: 7rem;
+}
+
+.flip-image-inner {
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s, transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-image:hover .flip-image-inner {
+    transform: rotateY(180deg) scale(1.2);
+}
+
+.flip-image-front, .flip-image-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /*-webkit-backface-visibility: hidden;*/
+    backface-visibility: hidden;
+    /*border: 1px solid coral;*/
+    border: 1px solid #be98aa;
+    border-radius: 1rem;
+}
+
+.flip-image-front {
+    background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
+    #74638f 40%, #be97a9 78%);
+    color: #3e3f4c;
+    box-shadow: 0 0 20px 5px #be98aa;
+    opacity: 0.2;
+}
+
+.flip-image-back {
+    background: linear-gradient(120deg, #74638f 30%, #be97a9 88%,
+    #be97a9 40%, #74638f 78%);
+    color: #3e3f4c;
+    /*双色撞色等*/
+    box-shadow: 0 0 15px 1px #be98aa;
+    transform: rotateY(180deg);
+    opacity: 0.9;
+}
+
+
+.flip-image1 {
+    margin: auto;
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin-bottom: 7rem;
+}
+
+.flip-image1-inner {
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s, transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-image1:hover .flip-image1-inner {
+    transform: rotateY(180deg) scale(1.2);
+}
+
+.flip-image1-front, .flip-image1-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /*-webkit-backface-visibility: hidden;*/
+    backface-visibility: hidden;
+    /*border: 1px solid coral;*/
+    border: 1px solid #be98aa;
+    border-radius: 1rem;
+}
+
+.flip-image1-front {
+    background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
+    #74638f 40%, #be97a9 78%);
+    color: #3e3f4c;
+    box-shadow: 0 0 20px 5px #be98aa;
+}
+
+.flip-image1-back {
+    background: linear-gradient(120deg, #74638f 30%, #be97a9 88%,
+    #be97a9 40%, #74638f 78%);
+    color: #3e3f4c;
+    /*双色撞色等*/
+    box-shadow: 0 0 15px 1px #be98aa;
+    transform: rotateY(180deg);
+}
+
+
+.flip-image2 {
+    margin: auto;
+    background-color: transparent;
+    width: 300px;
+    /*height: 400px;*/
+    height: 300px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin-bottom: 7rem;
+}
+
+.flip-image2-inner {
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s, transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-image2:hover .flip-image2-inner {
+    transform: rotateY(180deg) scale(1.2);
+}
+
+.flip-image2-front, .flip-image2-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /*-webkit-backface-visibility: hidden;*/
+    backface-visibility: hidden;
+    /*border: 1px solid coral;*/
+    border: 1px solid #be98aa;
+    /*border-radius: 1rem;*/
+    border-radius: 50%;
+}
+.flip-image2-front img, .flip-image2-back img {
+    border-radius: 50%;
+}
+
+.flip-image2-front {
+    background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
+    #74638f 40%, #be97a9 78%);
+    color: #3e3f4c;
+    box-shadow: 0 0 20px 5px #be98aa;
+}
+
+.flip-image2-back {
+    background: linear-gradient(120deg, #74638f 30%, #be97a9 88%,
+    #be97a9 40%, #74638f 78%);
+    color: #3e3f4c;
+    /*双色撞色等*/
+    box-shadow: 0 0 15px 1px #be98aa;
+    transform: rotateY(180deg);
+}
+
+
+.flip-card {
+    margin: auto;
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    /*margin: 0;*/
+}
+
+.flip-card-inner {
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s, transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg) scale(1.2);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /*-webkit-backface-visibility: hidden;*/
+    backface-visibility: hidden;
+    /*border: 1px solid coral;*/
+    border: 1px solid #be98aa;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
+    #74638f 40%, #be97a9 78%);
+    color: #3e3f4c;
+    box-shadow: 0 0 20px 5px #be98aa;
+    opacity: 0.3;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #74638f 30%, #be97a9 88%,
+    #be97a9 40%, #74638f 78%);
+    color: #3e3f4c;
+    /*双色撞色等*/
+    box-shadow: 0 0 15px 1px #be98aa;
+    transform: rotateY(180deg);
+    opacity: 0.9;
 }
