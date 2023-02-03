@@ -159,7 +159,7 @@ img {
 }
 
 .nav-list a:hover {
-    color: rgba(252, 128, 200);
+    color: rgba(252, 128, 200, 0.8);
     /*background-color: rgba(252, 128, 200, 0.8);*/
     border-radius: 10px;
     transform: scale(1.2);
@@ -167,6 +167,7 @@ img {
 
 .nav-list a:active {
     transform: scale(0.9);
+    color: rgba(252, 128, 200);
 }
 
 
