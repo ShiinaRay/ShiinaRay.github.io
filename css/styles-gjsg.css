@@ -230,7 +230,7 @@ blockquote {
     background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
     #74638f 40%, #be97a9 78%);
     color: #3e3f4c;
-    box-shadow: 0 0 20px 5px #be98aa;
+    box-shadow: 0 0 15px 3px #be98aa;
     opacity: 0.2;
 }
 
@@ -239,7 +239,7 @@ blockquote {
     #be97a9 40%, #74638f 78%);
     color: #3e3f4c;
     /*双色撞色等*/
-    box-shadow: 0 0 15px 1px #be98aa;
+    box-shadow: 0 0 20px 5px #be98aa;
     transform: rotateY(180deg);
     opacity: 0.9;
 }
@@ -286,7 +286,7 @@ blockquote {
     background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
     #74638f 40%, #be97a9 78%);
     color: #3e3f4c;
-    box-shadow: 0 0 20px 5px #be98aa;
+    box-shadow: 0 0 15px 3px #be98aa;
 }
 
 .flip-image1-back {
@@ -294,7 +294,7 @@ blockquote {
     #be97a9 40%, #74638f 78%);
     color: #3e3f4c;
     /*双色撞色等*/
-    box-shadow: 0 0 15px 1px #be98aa;
+    box-shadow: 0 0 20px 5px #be98aa;
     transform: rotateY(180deg);
 }
 
@@ -345,7 +345,7 @@ blockquote {
     background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
     #74638f 40%, #be97a9 78%);
     color: #3e3f4c;
-    box-shadow: 0 0 20px 5px #be98aa;
+    box-shadow: 0 0 15px 3px #be98aa;
 }
 
 .flip-image2-back {
@@ -353,7 +353,7 @@ blockquote {
     #be97a9 40%, #74638f 78%);
     color: #3e3f4c;
     /*双色撞色等*/
-    box-shadow: 0 0 15px 1px #be98aa;
+    box-shadow: 0 0 20px 5px #be98aa;
     transform: rotateY(180deg);
 }
 
@@ -405,7 +405,7 @@ blockquote {
     background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
     #74638f 40%, #be97a9 78%);
     color: #3e3f4c;
-    box-shadow: 0 0 20px 5px #be98aa;
+    box-shadow: 0 0 15px 3px #be98aa;
     opacity: 0.3;
 }
 
@@ -414,7 +414,7 @@ blockquote {
     #be97a9 40%, #74638f 78%);
     color: #3e3f4c;
     /*双色撞色等*/
-    box-shadow: 0 0 15px 1px #be98aa;
+    box-shadow: 0 0 20px 5px #be98aa;
     transform: rotateY(180deg);
     opacity: 0.9;
 }
