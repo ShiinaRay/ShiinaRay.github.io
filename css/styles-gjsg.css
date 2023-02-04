@@ -229,6 +229,10 @@ blockquote {
 .flip-image-front {
     background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,
     #74638f 40%, #be97a9 78%);
+    /*background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,*/
+    /* #be97a9 88%);*/
+    /*background: linear-gradient(120deg, #be97a9 30%, #74638f 88%,*/
+    /*#be97a9 93%);*/
     color: #3e3f4c;
     box-shadow: 0 0 15px 3px #be98aa;
     opacity: 0.2;
