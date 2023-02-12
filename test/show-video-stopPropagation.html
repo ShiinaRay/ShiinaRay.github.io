@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Show video box example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgba(243, 154, 188, 0.9);
+    }
+
+    button {
+      /*display: block;*/
+    }
+
+    div {
+      /*display: block;*/
+      /*position: absolute;*/
+      /*top: 50%;*/
+      /*transform: translate(-50%,-50%);*/
+      width: 100vw;
+      height: 100vh;
+      border-radius: 10px;
+      /*background-color: rgba(243, 154, 188, 0.9);*/
+      /*background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));*/
+    }
+
+    .hidden {
+      /*left: -50%;*/
+      visibility: hidden;
+    }
+
+    .showing {
+      /*left: 50%;*/
+      visibility: visible;
+    }
+
+    div video {
+      display: block;
+      width: 1280px;
+      height: 720px;
+      margin: auto;
+    }
+    .au {
+      background-color: #1f1f1f;
+    }
+
+  </style>
+</head>
+<body>
+<button>Display video</button>
+
+<div class="hidden">
+<!--  <iframe src="//player.bilibili.com/player.html?aid=644364784&bvid=BV1fY4y1F7GL&cid=884185853&page=1"-->
+<!--          scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="720px" width="1280px"> </iframe>-->
+    <video controls="" autoplay="" name="media">
+      <source src="https://www.bilibili.com/video/BV1fY4y1F7GL" type="video/flv">
+      <source src="https://img.nga.178.com/attachments/mon_202103/08/i2Qj0k-i7puZg.mp3" type="audio/mpeg">
+      <source src="test.mp4" type="video/mp4">
+      <source src="test.webm" type="video/webm">
+      <p>Your browser doesn't support HTML5 video. Here is a <a href="baidu.com">link to the video</a> instead.</p>
+    </video>
+</div>
+<div class="au">
+<audio>
+  <source src="https://img.nga.178.com/attachments/mon_202103/08/i2Qj0k-i7puZg.mp3" type="audio/mpeg">
+  Your browser does not support the <code>audio</code> element.
+</audio>
+</div>
+
+<script>
+
+  const btn = document.querySelector('button');
+  const videoBox = document.querySelector('div');
+
+  function displayVideo() {
+    if (videoBox.getAttribute('class') === 'hidden') {
+      videoBox.setAttribute('class','showing');
+    }
+  }
+
+  btn.addEventListener('click', displayVideo);
+
+  videoBox.addEventListener('click', () => videoBox.setAttribute('class', 'hidden'));
+
+  const video = document.querySelector('video');
+
+  video.addEventListener('click', e => {
+    e.stopPropagation();
+    video.play();
+  });
+
+</script>
+</body>
+</html>
