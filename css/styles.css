@@ -40,6 +40,34 @@ html {
     */
     font-size: 62.5%;
     scroll-behavior: smooth;
+    /*overflow: auto;*/
+    /*overflow: hidden;*/
+    /*transition: all 1s ease-out;*/
+    /*overflow: scroll;*/
+    /*overflow: visible;*/
+}
+/*html:hover {*/
+/*    overflow: auto;*/
+/*}*/
+
+/* Scrollbar
+--------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 1rem;
+    /*border-radius: 0.5rem;*/
+    background-color: rgba(92, 200, 243, 0.9);
+    /*width: 0;*/
+    /*z-index: 9;*/
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(252, 128, 200, 0.6);
+    border-radius: 1rem;
+    /*visibility: hidden;*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(252, 128, 200, 0.9);
 }
 
 /* A few media query to set some font sizes at different screen sizes.
@@ -273,6 +301,8 @@ img {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /*grid-template-rows: minmax(500px, auto);*/
+    /*grid-auto-rows: minmax(calc(), auto);*/
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
@@ -519,7 +549,6 @@ footer a {
         text-align: center;
     }
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
     * {

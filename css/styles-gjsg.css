@@ -20,7 +20,31 @@ html {
     /*color: #C4D7E7FF;*/
     /*color: #C4D7E7;*/
     user-select: none;
+    /*overflow: hidden;*/
 }
+
+
+/* Scrollbar
+--------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 1rem;
+    background-color: #243f6c;
+    background-image: linear-gradient(#243f6c, #111441);
+    /*width: 0;*/
+    /*z-index: 9;*/
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(196, 215, 231);
+    border-radius: 1rem;
+    /*visibility: hidden;*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(164, 186, 245);
+}
+
+
 
 body {
 /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
