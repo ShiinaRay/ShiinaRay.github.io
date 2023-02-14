@@ -1,0 +1,11 @@
+#myDiv {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    /*position: relative;*/
+    margin: 1100px auto;
+    text-align: center;
+}
+
+#myDiv.fade {
+    opacity: 0;
+}

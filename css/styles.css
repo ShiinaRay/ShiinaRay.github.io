@@ -112,42 +112,16 @@ body {
     /*font-family: 'Poppins', sans-serif;*/
     font-family: 'HYWenHei 85W', Arial, sans-serif;
     font-size: 1.8rem; /* 18px */
-    font-weight: 400;
-    line-height: 1.4;
-    color: #fff06e;
-}
+    /*font-weight: 400;*/
+    /*line-height: 1.4;*/
+    color: rgba(196, 215, 231);
 
-h1,
-h2 {
-    font-family: 'HYWenHei 85W', Arial, sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
-
-h1 {
-    font-size: 6rem;
-}
-
-h1.h1-one {
-    /*margin-top: 15vh;*/
-}
-
-h2 {
-    font-size: 4.2rem;
-}
-
-ul {
-    list-style: none;
 }
 
 a {
     text-decoration: none;
     color: var(--main-white);
-}
-
-img {
-    /*display: block;*/
-    /*width: 100%;*/
+    /*color: rgba(196, 215, 231);*/
 }
 
 /* nav */
@@ -259,12 +233,68 @@ img {
 }
 
 
+h1,
+h2 {
+    font-family: 'HYWenHei 85W', Arial, sans-serif;
+    /*font-weight: 700;*/
+    /*text-align: center;*/ /*unnecessary flex not necessary */
+    /*margin: 0 auto;*/
+    text-shadow: 0 0 10px rgba(252, 128, 200, 0.9);
+    filter: drop-shadow(0 0 10px rgba(196, 215, 231));
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+span.h1-two {
+    position: relative;
+    /*color: rgba(196, 215, 231);*/
+    white-space: nowrap;
+}
+
+span.h1-two::before {
+    content:"ShiinaRay!";
+    color: #fff06e;
+    position: absolute;
+    /*left: 0;*/
+    /*top: 0;*/
+    white-space: nowrap;
+    overflow: hidden;
+    /*border-right: 3px solid rgba(196, 215, 231);*/
+    animation: animate 4.24s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(196, 215, 231));
+    /*text-shadow: 0 0 10px rgba(196, 215, 231);*/
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
 .welcome-section > p {
     font-size: 3rem;
     font-weight: 200;
     font-style: italic;
-    /*color: skyblue;*/
     color: black;
+    text-shadow: 0 0 10px rgba(252, 128, 200, 0.9);
+    filter: drop-shadow(0 0 10px rgba(196, 215, 231));
+}
+
+#bio {
+    color: rgba(252, 128, 200);
 }
 
 /* Projects section */
@@ -518,7 +548,7 @@ footer {
     justify-content: space-evenly;
     padding: 2rem;
     /*border-top: 4px solid rgba(92, 200, 243, 1);*/
-    color: rgba(92, 200, 243);
+    color: rgba(196, 215, 231);
     background-position: bottom;
     background-image: url("../images/bg-Elysia.png");
     background-repeat: no-repeat;

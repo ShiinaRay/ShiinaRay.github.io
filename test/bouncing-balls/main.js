@@ -11,7 +11,7 @@ const ctx = canvas.getContext('2d');
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 
-// 生成随机数的函数
+// 生成随机数的函数  integer  [0,1)     [min,max)     min <= x < max
 
 function random(min,max) {
     const num = Math.floor(Math.random()*(max-min)) + min;
@@ -236,3 +236,12 @@ function loop() {
 }
 
 loop();
+
+
+
+// Block rightClick
+function stop() {
+    return false;
+}
+document.oncontextmenu = stop;
+
