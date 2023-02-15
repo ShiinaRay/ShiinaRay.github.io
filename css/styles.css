@@ -453,6 +453,7 @@ ul {
 .contact-links {
     display: flex;
     justify-content: center;
+    /*align-items: center;*/
     width: 100%;
     max-width: 980px;
     margin-top: 4rem;
@@ -461,12 +462,22 @@ ul {
 
 .contact-details {
     font-size: 2.4rem;
-    text-shadow: 2px 2px 1px #1f1f1f;
+    text-shadow: 0 0 10px rgba(196, 215, 231);
+    /*filter: drop-shadow(0 0 10px rgba(252, 128, 200, 0.9));*/
     transition: transform 0.3s ease-out;
+    margin: 8px auto;
 }
 
 .contact-details:hover {
     transform: translateY(8px);
+    /*filter: drop-shadow(0 0 42px rgba(252, 128, 200, 0.9));*/
+    filter: drop-shadow(0 0 42px rgba(196, 215, 231));
+}
+
+.contact-details:active {
+    transform: translateY(16px);
+    /*filter: drop-shadow(0 0 42px rgba(252, 128, 200, 0.9));*/
+    filter: drop-shadow(0 0 42px rgba(196, 215, 231));
 }
 
 
