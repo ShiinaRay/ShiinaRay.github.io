@@ -197,6 +197,17 @@ document.oncontextmenu = stop;
 // request.send();
 
 // fetch ----------------------------------------------------
+// fetch(url)
+//     .then( response => {
+//         if (!response.ok) {
+//             throw new Error(`HTTP error: ${response.status}`);
+//         }
+//         return response.text();
+//     })
+//     .then( text => poemDisplay.textContent = text )
+//     .catch( error => poemDisplay.textContent = `Could not fetch verse: ${error}`);
+
+// fetch ----------------------------------------------------
 // fetch('products.json')
 //     .then( response => {
 //         if (!response.ok) {
