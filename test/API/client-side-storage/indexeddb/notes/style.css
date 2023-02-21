@@ -5,6 +5,11 @@ html {
 body {
   margin: 0 auto;
   max-width: 800px;
+  background-image: url("../../../../../images/bg-rurudo.png") ;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 header, footer {
