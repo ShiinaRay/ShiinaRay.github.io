@@ -1,5 +1,34 @@
+@font-face {
+  font-family: 'HYWenHei 85W';
+  src: url('../../../../../fonts/HYWenHei-85W.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Scrollbar
+--------------------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 10px;
+  /*border-radius: 0.5rem;*/
+  background-color: #52bde6;
+  /*width: 0;*/
+  /*z-index: 9;*/
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(103, 212, 117, 0.424);
+  border-radius: 10px;
+  /*visibility: hidden;*/
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #67d475;
+}
+
+
+
 html {
-  font-family: sans-serif;
+  font-family: 'HYWenHei 85W', sans-serif;
 }
 
 body {
@@ -10,13 +39,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  color: #52bde6;
 }
 
 header, footer {
-  background-color: green;
-  color: white;
+  /*background-color: #67d475;*/
+  background-color: rgba(103, 212, 117, 0.424);
   line-height: 100px;
   padding: 0 20px;
+  text-align: center;
 }
 
 .new-note, .note-display {
@@ -24,7 +55,25 @@ header, footer {
 }
 
 .new-note {
-  background: #ddd;
+  background-color: rgba(103, 212, 117, 0.424);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div label {
+  margin-right: 5px;
+}
+
+button{
+  display: block;
+  margin: auto;
 }
 
 h1 {
