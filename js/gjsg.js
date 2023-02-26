@@ -10,9 +10,89 @@ document.oncontextmenu = stop;
 //     e.preventDefault();
 // });
 
+// Axios---------------------------------------------------- // const axios = require('axios');
+// 向给定ID的用户发起请求
+axios.get('https://shiinaray-api.vercel.app/stat/796556')
+    .then(function (response) {
+        // 处理成功情况
+        // console.log(response);
+        // console.log(response.data.follower);
+        let fansCount = response.data.follower;
+        let fans = document.getElementById("fans");
+        fans.innerHTML = "现在共有 " + fansCount + " 只鸽总";
+        // document.getElementById('fans').innerHTML = '粉丝数：' + fansCount;
+    })
+    .catch(function (error) {
+        // 处理错误情况
+        console.log(error);
+    })
+    .finally(function () {
+        // 总是会执行
+    });
+
+// 本地测试
+// axios.get('http://localhost:3001/stat/796556')
+//     .then(function (response) {
+//         // 处理成功情况
+//         // console.log(response);
+//         // console.log(response.data.follower);
+//         let fansCount = response.data.follower;
+//         let fans = document.getElementById("fans");
+//         fans.innerHTML = "现在共有 " + fansCount + " 只鸽总";
+//         // document.getElementById('fans').innerHTML = '粉丝数：' + fansCount;
+//     })
+//     .catch(function (error) {
+//         // 处理错误情况
+//         console.log(error);
+//     })
+//     .finally(function () {
+//         // 总是会执行
+//     });
+
+// // 向给定ID的用户发起请求
+// axios.get('/user?ID=12345')
+//     .then(function (response) {
+//         // 处理成功情况
+//         console.log(response);
+//     })
+//     .catch(function (error) {
+//         // 处理错误情况
+//         console.log(error);
+//     })
+//     .finally(function () {
+//         // 总是会执行
+//     });
+//
+// // 上述请求也可以按以下方式完成（可选）
+// axios.get('/user', {
+//     params: {
+//         ID: 12345
+//     }
+// })
+//     .then(function (response) {
+//         console.log(response);
+//     })
+//     .catch(function (error) {
+//         console.log(error);
+//     })
+//     .finally(function () {
+//         // 总是会执行
+//     });
+//
+// // 支持async/await用法
+// async function getUser() {
+//     try {
+//         const response = await axios.get('/user?ID=12345');
+//         console.log(response);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+
+
 // Axios----------------------------------------------------
 // axios({
-//     url: 'https://shiinaray-api.vercel.app/stat?vmid=796556',
+//     url: 'https://shiinaray-api.vercel.app',
 //     method: 'get',
 //     params: {
 //         callback: 'jsonpCallback'
@@ -47,46 +127,6 @@ document.oncontextmenu = stop;
 //     },
 // });
 
-// Axios---------------------------------------------------- // const axios = require('axios');
-// 向给定ID的用户发起请求
-// axios.get('/stat?vmid=796556')
-//     .then(function (response) {
-//         // 处理成功情况
-//         console.log(response);
-//     })
-//     .catch(function (error) {
-//         // 处理错误情况
-//         console.log(error);
-//     })
-//     .finally(function () {
-//         // 总是会执行
-//     });
-//
-// // 上述请求也可以按以下方式完成（可选）
-// axios.get('/stat', {
-//     params: {
-//         vmid: 796556
-//     }
-// })
-//     .then(function (response) {
-//         console.log(response);
-//     })
-//     .catch(function (error) {
-//         console.log(error);
-//     })
-//     .finally(function () {
-//         // 总是会执行
-//     });
-//
-// // 支持async/await用法
-// async function getUser() {
-//     try {
-//         const response = await axios.get('/stat?vmid=796556');
-//         console.log(response);
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
 
 // Axios----------------------------------------------------
 // import axios from "axios";
@@ -163,13 +203,54 @@ document.oncontextmenu = stop;
 //     var ajax = new XMLHttpRequest();
 //     ajax._url = "https://api.bilibili.com/x/relation/stat?vmid=796556";
 //     ajax.open("GET", ajax._url, true);
-//     ajax.send(null);
+//     // ajax.send(null);
 //     ajax.onreadystatechange = function () {
 //         if (ajax.readyState === 4) {
 //         let ajax_f = ajax.responseText;
 //         let ajax_z = JSON.parse(ajax_f);
 //         let xianshi = document.getElementById("fensi");
 //         xianshi.innerHTML = "现在共有" + ajax_z.fensishu + "只鸽总";
+//         }
+//     }
+//     setTimeout(() => {
+//     fansQuery();
+//     }, 30000)
+//     ajax.send(null);
+// }
+// fansQuery();
+
+<!--粉丝实时查询30秒循环查询-->
+//     function Yuanxing() {
+//     var ajax = new XMLHttpRequest();
+//     ajax._url = "https://api.xuehusang.cn/FansNum?" + Math.random();
+//     ajax.open("GET", ajax._url, true);
+//     ajax.send(null);
+//     ajax.onreadystatechange = function () {
+//     if (ajax.readyState === 4) {
+//     let ajax_f = ajax.responseText;
+//     let ajax_z = JSON.parse(ajax_f);
+//     let xianshi = document.getElementById("fensi");
+//     xianshi.innerHTML = "现在共有" + ajax_z.fensishu + "只雪狐咕";
+// }
+// }
+//     setTimeout(() => {
+//     Yuanxing();
+// }, 30000)
+// }
+//     Yuanxing();
+
+<!--粉丝实时查询30秒循环查询-->
+// function fansQuery() {
+//     var ajax = new XMLHttpRequest();
+//     ajax._url = "https://api.xuehusang.cn/FansNum?" + Math.random();
+//     ajax.open("GET", ajax._url, true);
+//     // ajax.send(null);
+//     ajax.onreadystatechange = function () {
+//         if (ajax.readyState === 4) {
+//         let ajax_f = ajax.responseText;
+//         let ajax_z = JSON.parse(ajax_f);
+//         let xianshi = document.getElementById("fensi");
+//         xianshi.innerHTML = "现在共有" + ajax_z.fensishu + "只雪狐咕";
 //         }
 //     }
 //     setTimeout(() => {
