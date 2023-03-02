@@ -66,14 +66,16 @@ a {
 }
 
 h1 {
-    width: 20%;
+    /*display: inline-block;*/
+    /*width: 20%;*/
     /*margin-left: 40%;*/
     margin: auto;
+
 }
 
 h1 a{
-    /*display: inline-block;*/
-    display: block;
+    display: inline-block;
+    /*display: block;*/
     font-size: 4rem;
     margin-bottom: 0;
     transition: all 0.2s ease-out;
@@ -98,7 +100,7 @@ h1 a:active {
 
 #a-fans {
     display: inline-block;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 #fans{
