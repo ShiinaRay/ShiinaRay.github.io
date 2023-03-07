@@ -617,6 +617,10 @@ Caches[`${APIURL}animes`] = [
         "title": "3月的狮子"
     },
     {
+        "id": 100444,
+        "title": "四月是你的谎言"
+    },
+    {
         "id": 876,
         "title": "CLANNAD ～AFTER STORY～"
     },
@@ -655,10 +659,6 @@ Caches[`${APIURL}animes`] = [
     {
         "id": 368116,
         "title": "尼尔：自动人形 Ver1.1a"
-    },
-    {
-        "id": 100444,
-        "title": "四月是你的谎言"
     },
     {
         "id": 192247,
