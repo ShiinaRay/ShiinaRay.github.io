@@ -749,6 +749,10 @@ Caches[`${APIURL}animes`] = [
         "title": "斩·赤红之瞳！"
     },
     {
+        "id": 326895,
+        "title": "夏日重现"
+    },
+    {
         "id": 358660,
         "title": "中国奇谭"
     },
@@ -756,6 +760,7 @@ Caches[`${APIURL}animes`] = [
         "id": 285437,
         "title": "三体"
     },
+
 ]
 
 
